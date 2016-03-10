@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <script src="https://use.fonticons.com/cbd966b3.js"></script>
+  <meta name="viewport" content="width=device-width">
+  <link href='https://fonts.googleapis.com/css?family=Jura:400,500' rel='stylesheet'>
+  <title>Sunergos| Coffee</title>
+	<link rel="stylesheet" href="/css/style.css">
+  <link rel="stylesheet" href="/css/normalize.css">
+	<link rel="stylesheet" href="/css/sweetalert.css" />
+
+
+</head>
+
+<body>
+<div id="app">{{ message }}</div>
+</div>
+	<header>
+			<nav class="main-header">
+			<ul class="main-nav">
+				<li><a href="index.html"><span>Home</span> <i class="fa fa-home fa-lg"></i></a></li>
+				<li><a href="locations.html"><span>locations</span><i class="fa fa-location fa-lg"></i></a></li>
+				<li><a href="shop.html"><span>Shop</span><i class="fa fa-shopping-cart fa-lg"></i></a></li>
+				<li><a href="wholesale.html"><span>Wholesale</span><i class="fa fa-wholesale fa-lg"></i></a></li>
+      </ul>
+		</nav>
+	</header>
+
+  <!--/.main-header-->
+
+	<div id="top" class="banner whole">
+
+		<a><img class="logo title" src="img/Sunergos_circle.png" alt="City"></a>
+		<i class="fa fa-angle-double-down"></i>
+	</div>
+
+
+
+  <h3>Contact Us!</h3>
+
+        <fieldset>
+
+					<form id="formId" action="//formspree.io/luke.v@att.net" method="POST">
+							<label for="name">Name:</label>
+			        <input type="text" name="name">
+							<label for="name">Business Name:</label>
+			        <input type="text" name="name">
+							<label for="name">City / State:</label>
+			        <input type="text" name="name">
+							<label for="name">Phone Number</label>
+			        <input type="text" name="name">
+							<label for="mail">Email:</label>
+			        <input type="email" name="_replyto">
+							<label for="bio">How Can We Serve You?</label>
+							<textarea id="bio" name="Info" v-model="message"></textarea>
+							<label>Interests:</label>
+							<input type="checkbox" id="development" value="Consulting" name="user_interest"><label class="light" for="development">Consulting</label><br>
+							<input type="checkbox" id="design" value="Equipment" name="user_interest"><label class="light" for="design">Equipment</label><br>
+							<input type="checkbox" id="business" value="Training" name="user_interest"><label class="light" for="business">Training</label>
+
+			      	<button id="#app"class="wholesale" type="submit" v-show="message" onclick="return clicked();" value="Send">Send</button>
+
+			    </form>
+				</fieldset>
+
+
+		<footer class="main-footer">
+			<a href="http://twitter.com/SunergosCoffee"><img src="img/twitter-wrap.png" alt="Twitter Logo" class="social-icon"></a>
+			<a href="http://facebook.com/SunergosCoffee"><img src="img/facebook-wrap.png" alt="Facebook" class="social-icon"></a>
+
+
+			<p>&copy; 2016 Luke Vaughan.</a>.</p>
+			<a href="#top">Back to top &raquo;</a>
+	</footer>
+
+	<script src="http://cdnjs.cloudflare.com/ajax/libs/vue/1.0.17/vue.min.js"></script>
+	<script src="/js/sweetalert.min.js"></script>
+	<script src="http://code.jquery.com/jquery-1.11.0.min.js" type="text/javascript" charset="utf-8"></script>
+  <script src="https://maps.google.com/maps/api/js"></script>
+  <script src="js/app.js" type="text/javascript" charset="utf-8"></script>
+</body>
+</html>
