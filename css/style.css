@@ -14,7 +14,8 @@ Details style
 ***********/
 .details-congo {
   text-align: left;
-  float: left;
+
+
 }
 .notes {
   text-align: left;
@@ -701,8 +702,14 @@ Media Queries
     }
 
     @media screen and (min-width: 1052px){
-      #ecuador .congo {
+      #ecuador .congo  {
         padding-bottom: 0;
       }
 
+    }
+
+    @media screen and (min-width: 1055px){
+      .guat {
+        padding-bottom: 15px;
+      }
     }
