@@ -40,17 +40,24 @@
 
         <fieldset>
 
-					<form id="formId" action="//formspree.io/luke.v@att.net" method="POST">
-							<label for="name">Name:</label>
-			        <input type="text" name="name">
+					<form novalidate id="formId" action="//formspree.io/luke.v@att.net" method="POST">
+						<validator id="validation" name="validation1">
+
+
+									<!-- <label for="username">Name:</label>
+									<input id="username" type="text" v-validate:username="['required']"><p class="forget" v-if="$validation1.username.required">Don't Forget Your Name!</p></input>
+								</div> -->
+							<label for="name">Name:
+							<p class="forget" v-if="$validation1.username.required">Don't Forget Your Name!</p></label>
+							<input type="text" v-validate:username="['required']" /></input>
 							<label for="name">Business Name:</label>
 			        <input type="text" name="name">
 							<label for="name">City / State:</label>
-			        <input type="text" name="name">
+			        <input type="text" placeholder="ex. Louisville/Kentucky"name="name">
 							<label for="name">Phone Number</label>
-			        <input type="text" name="name">
-							<label for="mail">Email:</label>
-			        <input type="email" name="_replyto">
+			        <input type="text" placeholder="(xxx)-xxx-xxxx" name="name">
+							<label for="mail">Email: <p class="forget" v-if="$validation1.email.required">Please Enter Email.</p></label>
+			        <input type="email" v-validate:email="['required']" name="_replyto">
 							<label for="bio">How Can We Serve You?</label>
 							<textarea id="bio" name="Info" v-model="message"></textarea>
 							<label>Interests:</label>
@@ -58,10 +65,33 @@
 							<input type="checkbox" id="design" value="Equipment" name="user_interest"><label class="light" for="design">Equipment</label><br>
 							<input type="checkbox" id="business" value="Training" name="user_interest"><label class="light" for="business">Training</label>
 
-			      	<button id="#app"class="wholesale" type="submit" v-show="message" onclick="return clicked();" value="Send">Send</button>
+							<button id="#app"class="wholesale" type="submit" v-show="message" onclick="return clicked();" value="Send">Send</button>
 
-			    </form>
-				</fieldset>
+
+
+
+
+  <!-- <validator id="validation" name="validation1">
+
+      <div class="name-field">
+        <label for="username">Name:</label>
+        <input id="username" type="text" v-validate:username="['required']"><p class="forget" v-if="$validation1.username.required">Don't Forget Your Name!</p></input>
+      </div>
+      <div class="comment-field">
+        <label for="comment">comment:</label>
+        <textarea id="bio" id="comment" type="text" v-validate:comment="{ maxlength: 256 }" v-model="message"></textarea>
+      </div> -->
+
+
+		        <p v-if="$validation1.comment.maxlength">Your comment is too long.</p>
+
+
+
+  </validator>
+		    </form>
+</fieldset>
+
+
 
 
 		<footer class="main-footer">

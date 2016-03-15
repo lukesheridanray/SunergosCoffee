@@ -118,3 +118,7 @@ new Vue({
         message: ''
     }
 });
+
+new Vue({
+  el: '#validation'
+})
