@@ -122,6 +122,9 @@ Details style
     text-shadow: 0 1px 1px rgba(0, 0, 0, .8);
     margin: 12px 0 0;
   }
+  .colorHead {
+  color: #48525c;
+  }
   h2 {
     font-size: 3.3125em;
     /* 53px/16px  */
@@ -146,6 +149,7 @@ Details style
     line-height: 1.5;
     text-shadow: 0 1px 1px rgba(0, 0, 0, .8);
   }
+
   h6 {
     font-size: 27px;
     /* 90px/16px */
@@ -153,7 +157,7 @@ Details style
     font-weight: bold;
     line-height: 1.5;
     text-shadow: 0 1px 1px;
-    padding-top: 80px;
+    padding-top: 10px;
   }
   .row.shot h3 {
     font-size: 1.25em;
@@ -245,6 +249,9 @@ Details style
   }
   .location-color {
     color: rgb(171, 149, 89);
+  }
+  .wholesale-color {
+      color: #48525c;
   }
   /* Main Styles --------------------- */
 
@@ -344,6 +351,11 @@ Details style
     padding-top: 25px;
     padding-bottom: 5px;
   }
+  .secondary-content, .wholesalePad {
+    padding-top: 0px;
+    padding-bottom: 70px;
+    border-bottom: 2px solid #dfe2e6;
+  }
   .secondary-content {
     padding-top: 40px;
     padding-bottom: 70px;
@@ -370,11 +382,15 @@ Details style
     border-top: 2px solid #dfe2e6;
   }
   /* Layout Styles ------------------ */
-
-  .primary-content, .secondary-content {
+.primary-content, .secondary-content {
+  margin-left: 12px;
+  margin-right: 12px;
+}
+  .primary-content {
     margin: 50px 50px;
     text-align: center;
   }
+
 
   .shop {
     color: rgb(171, 149, 89);
@@ -569,7 +585,7 @@ Media Queries
       display: none;
     }
   }
-  #Photo {
+  .Photo {
     width: 80%;
     height: auto;
   }
@@ -589,6 +605,7 @@ Media Queries
 
 
 
+
   @media screen and (min-width: 540px) {
     nav ul li a span {
       display: flex;
@@ -597,8 +614,8 @@ Media Queries
       display: none;
     }
 
-    #Photo {
-      width: 75%;
+    .Photo {
+      width: 50%;
       height: auto;
     }
 
@@ -659,18 +676,28 @@ Media Queries
       text-align: center;
     }
 
+  }
 
-    @media screen and (max-width: 767px){
+  @media screen and (max-width: 767px){
+
+    .Wholesalepic {
+      width: 75%;
+    }
+  }
+
+
+
+    @media screen and (min-width: 767px){
 
       .info {
         text-align: center;
         max-width: 100%;
 
       }
+.Photo {
+  width: 90%;
+}
 
-      #Photo {
-        width: 50%;
-      }
     }
 
 @media screen and (min-width: 847px){
@@ -699,6 +726,9 @@ Media Queries
         padding-left: 50px;
         padding-right: 50px;
       }
+      .Photo {
+        width: 65%;
+      }
     }
 
     @media screen and (min-width: 1052px){
@@ -724,4 +754,23 @@ Media Queries
 margin: 3px;
   color: red;
   padding-bottom: 10px;
+}
+
+
+.wholesalePage {
+  text-align: justify;
+  padding-left: 10px;
+  padding-right: 10px;
+  word-wrap: break-word;
+
+
+}
+.wholesaleFix {
+  padding: 10px;
+}
+.center-here {
+  text-align: center;
+  padding-bottom: 0px;
+  margin-bottom: 5px;
+  color: #df5e47
 }
