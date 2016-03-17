@@ -97,21 +97,21 @@
 								</div> -->
 							<label for="name">Name:
 							<p class="forget" v-if="$validation1.username.required">Don't Forget Your Name!</p></label>
-							<input type="text" v-validate:username="['required']" /></input>
+							<input id="name" type="text" v-validate:username="['required']" /></input>
 							<label for="name">Business Name:</label>
-			        <input type="text" name="name">
+			        <input id="business" type="text" name="name">
 							<label for="name">City / State:</label>
-			        <input type="text" placeholder="ex. Louisville/Kentucky"name="name">
-							<label for="name">Phone Number</label>
-			        <input type="text" placeholder="(xxx)-xxx-xxxx" name="name">
-							<label for="mail">Email: <p class="forget" v-if="$validation1.email.required">Please Enter Email.</p></label>
-			        <input type="email" v-validate:email="['required']" name="_replyto">
+			        <input id="cityStreet" type="text" placeholder="ex. Louisville/Kentucky"name="name">
+							<label for="number">Phone Number</label>
+			        <input id="number" type="text" placeholder="(xxx)-xxx-xxxx" name="number">
+							<label for="email">Email: <p class="forget" v-if="$validation1.email.required">Please Enter Email.</p></label>
+			        <input id="email" type="email" v-validate:email="['required']" name="_replyto">
 							<label for="bio">How Can We Serve You?</label>
 							<textarea id="bio" name="Info" v-model="message"></textarea>
 							<label>Interests:</label>
 							<input type="checkbox" id="development" value="Consulting" name="user_interest"><label class="light" for="development">Consulting</label><br>
 							<input type="checkbox" id="design" value="Equipment" name="user_interest"><label class="light" for="design">Equipment</label><br>
-							<input type="checkbox" id="business" value="Training" name="user_interest"><label class="light" for="business">Training</label>
+							<input type="checkbox" id="train" value="Training" name="user_interest"><label class="light" for="business">Training</label>
 
 							<button id="#app" class="wholesale" type="submit" v-show="message" onclick="return clicked();" value="Send">Send</button>
 

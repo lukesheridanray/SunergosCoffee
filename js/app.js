@@ -3,10 +3,36 @@
 //$(".primary-content").hide().show("slow");
 if ($('input').hasClass('wholesale')) {
   function clicked() {
-    var formdata = $('#formId').serialize();
+
+    var formdata = {},
+    $form= $('#formId'),
+    interests = [];
+
+formdata.User = $form.find('#name').val();
+formdata.Business = $form.find('#business').val();
+formdata.City = $form.find('#cityStreet').val();
+formdata.Phone = $form.find('#number').val();
+formdata.Email = $form.find('#email').val();
+formdata.Message = $form.find('#bio').val();
+
+
+if ($form.find('#design').is(':checked')) {
+    interests.push('Equipment');
+}
+if ($form.find('#train').is(':checked')) {
+    interests.push('Training');
+}
+if ($form.find('#development').is(':checked')) {
+    interests.push('Consulting');
+}
+formdata['Interests'] = interests.join(', ');
+// 'Training, Equipment';
+
+
     $.ajax('//formspree.io/luke.v@att.net', {
       data: formdata,
       type: 'post',
+      dataType: "json",
       success: function() {
         swal("Good job", "You clicked the button!", "success");
       }
