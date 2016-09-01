@@ -357,7 +357,6 @@ Details style
     border-bottom: 2px solid #dfe2e6;
   }
   .secondary-content {
-    padding-top: 40px;
     padding-bottom: 70px;
     border-bottom: 2px solid #dfe2e6;
   }
@@ -378,18 +377,38 @@ Details style
     height: 20px;
     margin: 0 5px 15px;
   }
-  .t-border {
+  /*.t-border {
     border-top: 2px solid #dfe2e6;
-  }
+  }*/
   /* Layout Styles ------------------ */
 .primary-content, .secondary-content {
   margin-left: 12px;
   margin-right: 12px;
 }
   .primary-content {
-    margin: 50px 50px;
+    margin: 0px 50px 0px;
     text-align: center;
   }
+
+  h4#front-shop {
+    margin-bottom: 15px;
+  }
+  p.locations-text {
+    border: solid 1px #878787;
+    padding: 13px;
+    width: 65%;
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+  }
+  p.intro {
+    border: solid 1px #878787;
+    padding: 13px;
+    width: 65%;
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+}
 
 
   .shop {
